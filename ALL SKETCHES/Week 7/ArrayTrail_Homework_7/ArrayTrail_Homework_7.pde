@@ -27,7 +27,8 @@ void draw()
     
     rotate(radians(i++));                //rotation = i++ (canvas rotation == circular shape)
     ellipse(x[i], 0, i/2, i/2);          //For each entry in our array - we draw a circle with x coordinate = to the saved mouseX values --and height and width = the index of those mouseX values
-    ellipse(x[i], 200, i/2, i/2);        //ellipse(x1, y1, width, height)
+    ellipse(x[i], 100, i/2, i/2);        //ellipse(x1, y1, width, height)
+    ellipse(x[i], 200, i/2, i/2);
     ellipse(x[i], 300, i/2, i/2);
     ellipse(x[i], 400, i/2, i/2);
     
@@ -47,10 +48,10 @@ void draw()
    
    rotate(radians(j++));        //rotation = j++ (canvas rotation == circular shape)
    rect(y[j], 0, j, j);         //For each entry in our array - we draw a rectangle with y coordinate = to the saved mouseY values --and height and width = the index of those mouseY values
-   rect(y[j], 100, j, j);       //rect(x1, y1, width, height)
-   rect(y[j], 200, j, j);
-   rect(y[j], 300, j, j);
-   rect(y[j], 400, j, j);
+   rect(y[j]+1, 100, j, j);       //rect(x1, y1, width, height)
+   rect(y[j]+2, 200, j, j);
+   rect(y[j]+3, 300, j, j);
+   rect(y[j]+4, 400, j, j);
    
    fill(255, 100);    //Fill color = white, and alpha/transparency = 100
    popMatrix();                     //Reset canvas translation/rotation
