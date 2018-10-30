@@ -376,12 +376,9 @@
 //      fill(greyColors[i][j]);
 //      rect(i * 60, j * 60, width/gridW, height/gridH);
       
-//      if(greyColors[i][j] >= 255)
+//      if(greyColors[i][j] > 255)
 //      {
 //        greyColors[i][j] = 0;
-//        greyColors[i][j] += 1;
-//        fill(greyColors[i][j]);
-//        rect(i * 60, j * 60, width/gridW, height/gridH);
 //      }
 //    }
 //  }
