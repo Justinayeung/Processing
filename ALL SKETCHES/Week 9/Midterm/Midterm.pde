@@ -199,8 +199,8 @@
 //  {
 //    for (int j = 0; j < height; j++) 
 //    {
-//      float r = map(i/5, 0, 255, 0, width);
-//      float g = map(j/5, 0, 255, 0, height);
+//      float r = map(i, 0, width, 0, 255);    ////what was done before == float r = map(i/5, 0, 255, 0, width);
+//      float g = map(j, 0, height, 0, 255);    ////what was done before == float g = map(j/5, 0, 255, 0, height);
 //      stroke(r, g, 175);
 //      point(i, j);
 //    }
@@ -343,8 +343,8 @@
 //{
 //  background(50);
 //  translate(width/2, height/2);
-//  float x = map(mouseX, 0, 600, 0, 360);
-//  rotate(radians(x));
+//  float x = map(mouseX, 0, 600, 0, 360);      //float angle = map(mouseX, 0, width, radians(0), radians(360));
+//  rotate(radians(x));                         //rotate(angle);
 //  triangle(0, -100, 50, 100, -50, 100);
 //}
 //---------------------------------------------------------Extra Credit
