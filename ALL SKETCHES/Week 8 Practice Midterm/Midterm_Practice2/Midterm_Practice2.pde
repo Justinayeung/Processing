@@ -74,8 +74,8 @@
 //  {
 //    for (int j = 0; j < height; j++) 
 //    {
-//      float r = map(i, 0, 1500, 0, width);
-//      float b = map(j, 0, 1500, 0, height);
+//      float r = map(i/5, 0, 255, 0, width);    //OR -- map(i, 0, 1500, 0, width);
+//      float b = map(j/5, 0, 255, 0, height);   //OR -- map(j, 0, 1500, 0, height);
 //      stroke(r, 0, b);
 //      point(i, j);
 //    }
