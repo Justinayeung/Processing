@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------
-//Class Information
+//CLASS INFORMATION
 //-------------------------------------------------------------------------
 //Scope
 
@@ -123,8 +123,13 @@
 //  m1.move();
 //}
 
+
+
+
+
+
 //-------------------------------------------------------------------------
-//Practice 
+//FINAL PRACTICE
 //-------------------------------------------------------------------------
 //--While-- loop to --for-- loop
 
@@ -157,12 +162,13 @@
 //}
 
 //-------------------------------------------------------------------------
-//Array 1 (UNSOLVED)
+//Array 1
 
 //int gridW = 20;
 //int gridH = 20;
 
 //float[][] angles = new float[gridW][gridH];
+//float[][] rotateAngles = new float[gridW][gridH];
 
 //void setup() 
 //{
@@ -172,12 +178,14 @@
 //  {
 //    for (int j = 0; j < gridH; j++) 
 //    {
-//      angles[i][j] = random(360);
+//      angles[i][j] = map(i, 0, gridW, 0, 180);
+//      rotateAngles[i][j] = random (1, 5);      //Giving random value of rotation
 //    }
 //  }
 //}
 
-//void draw() {
+//void draw() 
+//{
 //  background(0);
 
 //  for (int i = 0; i < gridW; i++) 
@@ -186,6 +194,7 @@
 //    {
 //      pushMatrix();
 //      translate(i * width/gridW, j * height/gridH);
+//      angles[i][j] += rotateAngles[i][j];    //Seting angles[i][j] to equal the rotation
 //      rotate(radians(angles[i][j]));
 //      line(-width/gridW*0.5, 0, width/gridW*0.5, 0);
 //      popMatrix();
@@ -194,12 +203,13 @@
 //}
 
 //-------------------------------------------------------------------------
-//Array 2 (UNSOLVED)
+//Array 2
 
 //int gridW = 10;
 //int gridH = 10;
 
 //boolean[][] isRed = new boolean[gridW][gridH];
+//float[][] size = new float[gridW][gridH];
 
 //void setup() {
 //  size(800, 800);
@@ -208,6 +218,8 @@
 //  {
 //    for (int j = 0; j < gridH; j++) 
 //    {
+//      size[i][j] = map(i, 0, gridW, 0, 50);  //Changes the sizes
+      
 //      if (i >= gridW/2 && j >= gridH/2) 
 //      {
 //        isRed[i][j] = true;
@@ -226,7 +238,6 @@
 //  {
 //    for (int j = 0; j < gridH; j++) 
 //    {
-
 //      if (isRed[i][j] == true) 
 //      {
 //        fill(200, 0, 0);
@@ -235,10 +246,11 @@
 //      {
 //        fill(200, 200, 200);
 //      }
-//      float w = width/gridW;
-//      float h = height/gridH;
-//      float xPos = i * width/gridW + w/2;
-//      float yPos = j * height/gridH + h/2;
+
+//      float w = width/gridW - size[i][j];    //Decreases as the grid continues
+//      float h = height/gridH - size[i][j];   //Decreases as ghe grid continues
+//      float xPos = i * width/gridW + w/2;    //Xposition of each ellipse
+//      float yPos = j * height/gridH + h/2;   //Yposition of each ellipse
 
 //      ellipse(xPos, yPos, w, h);
 //    }
